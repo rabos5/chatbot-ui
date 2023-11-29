@@ -81,5 +81,8 @@ if __name__ == '__main__':
         port=int(os.environ['CHATBOT_UI_PORT']),
         workers=int(os.environ['CHATBOT_UI_WORKERS']),
         log_level=log_level,
+        # ssl_keyfile='./config/certs/pkey.pem',
+        # ssl_certfile='./config/certs/cert.crt',
+        # access_log=False,
         reload=True
     )
