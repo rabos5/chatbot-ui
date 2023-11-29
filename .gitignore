@@ -1,3 +1,4 @@
+.DS_Store
 chatbot_api/.rasa
 chatbot_api/models
 chatbot_ui/widget/node_modules
