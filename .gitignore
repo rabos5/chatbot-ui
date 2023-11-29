@@ -1,5 +1,6 @@
 chatbot_api/.rasa
 chatbot_api/models
+chatbot_ui/widget/node_modules
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
