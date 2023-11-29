@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChatBot Sandbox</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <style>
+        body {
+
+        }
+
+        nav {
+
+        }
+
+        nav ul {
+
+        }
+
+        nav ul li {
+
+
+        }
+
+        nav ul li:last-child {
+
+        }
+
+        nav ul li a {
+
+        }
+
+        form {
+
+        }
+
+        #chat-container {
+
+        }
+
+        #chat-conversation {
+
+        }
+
+        #chat-conversation-container {
+
+        }
+
+        #chat-input-container {
+
+        }
+
+        input[type="text"] {
+
+        }
+
+        button[type="submit"] {
+
+        }
+
+        button[type="submit"] img {
+
+        }
+
+        .message-You {
+
+        }
+
+        .message-ChatBot {
+
+        }
+
+        .item-button {
+
+        }
+
+        .disabled-item-button {
+
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/"><img src="/assets/favicon.ico" width="40" height="40"></a></li>
+            <li><a href="/" style="font-size: 36px;">ChatBot Sandbox</a></li>
+        </ul>
+        <ul>
+            <li><a target="_blank" href="https://github.com/rabos5/chatbot-ui">code</a></li>
+        </ul>
+    </nav>
+    <div>
+        <form id="chat-form">
+            <div id="chat-container">
+                <div class="chat-container" id="chat-conversation">
+                    <div class="chat-conversation-container" id="chat-conversation-container"></div>
+                </div>
+                <div class="chat-input-container" id="chat-input-container">
+                    <input type="text" id="chat-input" placeholder="Type your message here..." autofocus>
+                    <button type="submit" id="chat-button"><img src="/assets/chat_button.png"></button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        const queryParams = new URLSearchParams(window.location.search);
+        const sender = queryParams.get('sender');
+        const timestamp = new Date();
+        const conversationId = `${sender}_chatbot_sandbox_${timestamp}`;
+        const chatForm = document.getElementById('chat-form');
+        const chatInput = document.getElementById('chat-input');
+        const chatConversationContainer = document.getElementById('chat-conversation-container');
+
+        chatInput.setAttribute("autocomplete", "off");
+    </script>
+</body>
+</html>

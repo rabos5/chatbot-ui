@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "chatbot-ui"
+version = "0.0.1"
+description = ""
+authors = ["Ryan Bostian <rab0309@gmail.com>"]
+readme = ""
+packages = [{include = "chatbot_ui"}]
+
+[tool.poetry.dependencies]
+python = "3.10.11"
+fastapi = "^0.104.1"
+uvicorn = "^0.24.0.post1"
+python-dotenv = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

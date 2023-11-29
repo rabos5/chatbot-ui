@@ -1,0 +1,27 @@
+version: "3.1"
+
+intents:
+  - greet
+  - choose_option
+  - goodbye
+
+responses:
+  utter_greet:
+  - text: "hello!"
+
+  utter_choose:
+  - text: "please select one of the options below!"
+    buttons:
+      - title: "cat"
+        payload: "/choose_option{\"option\": \"cat\"}"
+      - title: "dog"
+        payload: "/choose_option{\"option\": \"dog\"}"
+      - title: "horse"
+        payload: "/choose_option{\"option\": \"horse\"}"
+
+  utter_goodbye:
+  - text: "see ya!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
