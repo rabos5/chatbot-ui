@@ -1,115 +1,115 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ChatBot Sandbox</title>
-    <script defer="defer" src="/static/index.js"></script>
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-    <style>
-        body {
-          margin: 0;
-          padding: 0;
-          font-family: Calibri, sans-serif;
-          background-color: #111111;
-        }
+  <title>ChatBot Sandbox</title>
+  <script defer="defer" src="/static/index.js"></script>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Calibri, sans-serif;
+      background-color: #111111;
+    }
 
-        nav {
-          background-color: #121212;
-          color: #ffffff;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 10px 20px;
-        }
+    nav {
+      background-color: #121212;
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
 
-        nav ul {
-          margin: 0;
-          padding: 0;
-          list-style: none;
-          display: flex;
-        }
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+    }
 
-        nav ul li {
-          margin-right: 20px;
-        }
+    nav ul li {
+      margin-right: 20px;
+    }
 
-        nav ul li:last-child {
-          margin-right: 20px;
-        }
+    nav ul li:last-child {
+      margin-right: 20px;
+    }
 
-        nav ul li a {
-          color: #ffffff;
-            text-decoration:none;
-            font-weight: bold;
-        }
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        form {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-top: 20px;
-        }
-    </style>
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="/"><img src="/assets/favicon.ico" width="40" height="40"></a></li>
-            <li><a href="/" style="font-size: 36px;">ChatBot Sandbox</a></li>
-        </ul>
-        <ul>
-            <li><a target="_blank" href="https://github.com/rabos5/chatbot-ui">code</a></li>
-        </ul>
-    </nav>
-    <noscript>You need to enable JavaScript in order to run this application.</noscript>
-    <div>
-        <form id="chat-form">
-        </form>
-    </div>
+  <nav>
+    <ul>
+      <li><a href="/"><img src="/assets/favicon.ico" width="40" height="40"></a></li>
+      <li><a href="/" style="font-size: 36px;">ChatBot Sandbox</a></li>
+    </ul>
+    <ul>
+      <li><a target="_blank" href="https://github.com/rabos5/chatbot-ui">code</a></li>
+    </ul>
+  </nav>
+  <noscript>You need to enable JavaScript in order to run this application.</noscript>
+  <div>
+    <form id="chat-form">
+    </form>
+  </div>
 </body>
 <script>
-    !(function () {
-        let e = document.createElement("script"),
-            t = document.head || document.getElementsByTagName("head")[0];
-        (e.src = "/static/index.js"),
-            (e.async = !0),
-            (e.onload = () => {
-                window.ChatbotWidget.default({
-                    rasaServerUrl: "http://localhost:5005/webhooks/rest/webhook",
-                    // senderId: "",
-                    userId: "test_user",
-                    initialPayload: "/greet",
-                    metadata: {},
-                    botTitle: "ChatBot Sandbox - Widget",
-                    // botSubTitle: "",
-                    // botAvatar: "data:image/png;base64,",
-                    widgetColor: "#a78bfa",
-                    textColor: "#4c1d95",
-                    chatHeaderCss: {
-                        // enableBotAvatarBorder: true,
-                        textColor: "#4c1d95",
-                        backgroundColor: "#a78bfa",
-                    },
-                    chatHeaderTextColor: "#4c1d95",
-                    botMsgBackgroundColor: "#f3f4f6",
-                    botMsgColor: "#4b5563",
-                    userMsgBackgroundColor: "#e1d7ff",
-                    userMsgColor: "#4c1d95",
-                    botResponseDelay: "",
-                    embedded: false,
-                    buttonsCss: {
-                        color: "#4c1d95",
-                        backgroundColor: "#e1d7ff",
-                        borderColor: "#4b5563",
-                        borderWidth: "0px",
-                        borderRadius: "999px",
-                        hoverBackgroundColor: "white",
-                        hoverColor: "#4b5563",
-                        hoverborderWidth: "1px",
-                        enableHover: false,
-                    },
-                });
-            }),
-            t.insertBefore(e, t.firstChild);
-    })();
+  !(function () {
+    let e = document.createElement("script"),
+      t = document.head || document.getElementsByTagName("head")[0];
+    (e.src = "/static/index.js"),
+      (e.async = !0),
+      (e.onload = () => {
+        window.ChatbotWidget.default({
+          rasaServerUrl: "http://localhost:5005/webhooks/rest/webhook",
+          // senderId: "",
+          userId: "test_user",
+          initialPayload: "/greet",
+          metadata: {},
+          botTitle: "ChatBot Sandbox - Widget",
+          // botSubTitle: "",
+          // botAvatar: "data:image/png;base64,",
+          widgetColor: "#a78bfa",
+          textColor: "#4c1d95",
+          chatHeaderCss: {
+            // enableBotAvatarBorder: true,
+            textColor: "#4c1d95",
+            backgroundColor: "#a78bfa",
+          },
+          chatHeaderTextColor: "#4c1d95",
+          botMsgBackgroundColor: "#f3f4f6",
+          botMsgColor: "#4b5563",
+          userMsgBackgroundColor: "#e1d7ff",
+          userMsgColor: "#4c1d95",
+          botResponseDelay: "",
+          embedded: false,
+          buttonsCss: {
+            color: "#4c1d95",
+            backgroundColor: "#e1d7ff",
+            borderColor: "#4b5563",
+            borderWidth: "0px",
+            borderRadius: "999px",
+            hoverBackgroundColor: "white",
+            hoverColor: "#4b5563",
+            hoverborderWidth: "1px",
+            enableHover: false,
+          },
+        });
+      }),
+      t.insertBefore(e, t.firstChild);
+  })();
 </script>
 </html>
