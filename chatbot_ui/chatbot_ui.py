@@ -69,7 +69,7 @@ async def chatbot_full_page():
 
 @app.get('/widget', response_class=HTMLResponse)
 async def chatbot_widget():
-    with open('static/chatbot_widget.html', 'r') as file:
+    with open('static/chatbot_widget_page.html', 'r') as file:
         html = file.read()
     return html
 
