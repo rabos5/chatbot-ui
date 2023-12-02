@@ -20,7 +20,7 @@ const AppContext = createContext({
   buttonsCss: {},
   chatHeaderCss: {},
   errorMessages: [],
-  embedded:false
+  embedded: false
 });
 
 export default AppContext;

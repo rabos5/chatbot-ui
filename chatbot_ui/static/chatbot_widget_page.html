@@ -65,53 +65,53 @@
     <form id="chat-form">
     </form>
   </div>
-  <script>
-    !(function () {
-      let e = document.createElement("script"),
-        t = document.head || document.getElementsByTagName("head")[0];
-      (e.src = "/static/index.js"),
-        (e.async = !0),
-        (e.onload = () => {
-          window.ChatbotWidget.default({
-            rasaServerUrl: "http://localhost:5005/webhooks/rest/webhook",
-            // senderId: "",
-            userId: "test_user",
-            initialPayload: "/greet",
-            metadata: {},
-            botTitle: "ChatBot Sandbox - Widget",
-            // botSubTitle: "",
-            enableBotAvatar: false,
-            // botAvatar: "data:image/png;base64,",
-            enableDropdownMenu: false,
-            widgetColor: "#a78bfa",
-            textColor: "#4c1d95",
-            chatHeaderCss: {
-              // enableBotAvatarBorder: true,
-              textColor: "#4c1d95",
-              backgroundColor: "#a78bfa",
-            },
-            chatHeaderTextColor: "#4c1d95",
-            botMsgBackgroundColor: "#f3f4f6",
-            botMsgColor: "#4b5563",
-            userMsgBackgroundColor: "#e1d7ff",
-            userMsgColor: "#4c1d95",
-            botResponseDelay: "",
-            embedded: false,
-            buttonsCss: {
-              color: "#4c1d95",
-              backgroundColor: "#e1d7ff",
-              borderColor: "#4b5563",
-              borderWidth: "0px",
-              borderRadius: "999px",
-              hoverBackgroundColor: "white",
-              hoverColor: "#4b5563",
-              hoverborderWidth: "1px",
-              enableHover: false,
-            },
-          });
-        }),
-        t.insertBefore(e, t.firstChild);
-    })();
-  </script>
 </body>
+<script>
+  !(function () {
+    let e = document.createElement("script"),
+      t = document.head || document.getElementsByTagName("head")[0];
+    (e.src = "/static/index.js"),
+      (e.async = !0),
+      (e.onload = () => {
+        window.ChatbotWidget.default({
+          rasaServerUrl: "http://localhost:5005/webhooks/rest/webhook",
+          // senderId: "",
+          userId: "test_user",
+          initialPayload: "/greet",
+          metadata: {},
+          botTitle: "ChatBot Sandbox - Widget",
+          // botSubTitle: "",
+          enableBotAvatar: false,
+          // botAvatar: "data:image/png;base64,",
+          enableDropdownMenu: false,
+          widgetColor: "#079543",
+          textColor: "#ffffff",
+          chatHeaderCss: {
+            // enableBotAvatarBorder: true,
+            textColor: "#ffffff",
+            backgroundColor: "#079543",
+          },
+          chatHeaderTextColor: "#ffffff",
+          botMsgBackgroundColor: "#f3f4f6",
+          botMsgColor: "#4b5563",
+          userMsgBackgroundColor: "#e1d7ff",
+          userMsgColor: "#4c1d95",
+          botResponseDelay: "",
+          embedded: false,
+          buttonsCss: {
+            color: "#ffffff",
+            backgroundColor: "#079543",
+            borderColor: "#ffffff",
+            borderWidth: "1x",
+            borderRadius: "0px 20px 20px 0px",
+            // hoverBackgroundColor: "#079543",
+            // hoverColor: "#4b5563",
+            // hoverborderWidth: "1px",
+            enableHover: false,
+          },
+        });
+      }),
+      t.insertBefore(e, t.firstChild);
+  })();
+</script>
 </html>
