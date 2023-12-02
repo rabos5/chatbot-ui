@@ -4,6 +4,8 @@ const AppContext = createContext({
   rasaServerUrl: "",
   initialPayload: "",
   metadata: {},
+  enableBotAvatar: false,
+  enableDropdownMenu: false,
   botAvatar: "",
   widgetColor: "",
   botTitle: "",

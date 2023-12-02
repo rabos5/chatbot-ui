@@ -31,8 +31,10 @@ export const Header = () => {
   const dispatch = useDispatch();
   const appContext = useContext(AppContext);
   const {
-    botSubTitle,
     botTitle,
+    botSubTitle,
+    enableBotAvatar,
+    enableDropdownMenu,
     botAvatar,
     chatHeaderCss,
     rasaServerUrl,
@@ -70,33 +72,45 @@ export const Header = () => {
       })
     );
   };
+  const isCentered = !enableBotAvatar && !enableDropdownMenu;
+
   return (
     <>
       <div
-        className="relative flex h-[20%]  cursor-default items-center space-x-4  rounded-t-[1.8rem]  p-2 shadow-lg drop-shadow"
+        className={`relative flex h-[20%] cursor-default items-center space-x-4 rounded-t-[1.8rem] p-2 shadow-lg drop-shadow ${isCentered ? 'justify-center' : ''}`}
         style={{ backgroundColor, color: textColor }}
       >
+
+      {enableBotAvatar && (
         <div
           className="shrink-0 rounded-full border-[1px]  p-2"
           style={{ borderColor: textColor, borderWidth: enableBotAvatarBorder }}
         >
           <img className="h-12 w-12" src={botAvatar} alt="Bot Logo" />
         </div>
-        <div className="w-full ">
+      )}
+
+        <div className={`w-full ${isCentered ? 'text-center' : ''}`}>
           <div className="text-xl font-semibold antialiased">{botTitle}</div>
-          <p className="">{botSubTitle}</p>
+          <p>{botSubTitle}</p>
         </div>
-        <motion.div
-          whileHover={{ scale: 1.2 }}
-          className="flex"
-          onClick={() => {
-            setShowDropdown(!showDropdown);
-          }}
-        >
-          <Bars3BottomRightIcon className=" h-7 w-7" />
-        </motion.div>
+
+        {!isCentered && (
+          <motion.div
+            whileHover={{ scale: 1.2 }}
+            className="flex"
+            onClick={() => {
+              if (enableDropdownMenu) {
+                setShowDropdown(!showDropdown);
+              }
+            }}
+          >
+            <Bars3BottomRightIcon className=" h-7 w-7" />
+          </motion.div>
+        )}
+        
       </div>
-      {showDropdown && (
+      {enableDropdownMenu && showDropdown && (
         <div
           id="dropdown"
           className=" absolute right-5 top-16 z-50 w-fit cursor-default  divide-y divide-gray-100 rounded-xl bg-white shadow-lg"
