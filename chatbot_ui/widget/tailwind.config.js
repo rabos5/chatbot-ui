@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        lato: ["Lato", "sans-serif"],
+        lato: ["Calibri", "sans-serif"],
       },
       screens: {
         xs: { max: "600px" },
