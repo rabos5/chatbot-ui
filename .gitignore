@@ -1,6 +1,7 @@
 .DS_Store
 chatbot_api/.rasa
 chatbot_api/models
+chatbot_api/rasa.db
 chatbot_ui/widget/node_modules
 
 # Byte-compiled / optimized / DLL files

@@ -8,10 +8,10 @@ export default (props, element = null) => {
   const load = () => {
     if (element === null) {
       const node = document.createElement("div");
-      node.setAttribute("id", "rasaWidget");
+      node.setAttribute("id", "chatBotWidget");
       document.body.appendChild(node);
     }
-    const mountElement = element || document.getElementById("rasaWidget");
+    const mountElement = element || document.getElementById("chatBotWidget");
     const root = createRoot(mountElement);
     root.render(<Widget {...props} />);
   };

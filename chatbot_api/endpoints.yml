@@ -40,3 +40,10 @@
 #  username: username
 #  password: password
 #  queue: queue
+
+# for local testing:
+tracker_store:
+  type: SQL
+  dialect: "sqlite"
+  url: "sqlite:///./rasa.db"
+  db: rasa.db""
